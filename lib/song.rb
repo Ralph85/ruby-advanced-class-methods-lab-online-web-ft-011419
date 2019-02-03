@@ -42,7 +42,7 @@ class Song
     # either return a matching song instance with that name
     # or create a new song with the name and return the song instance.
     did_i_find_it = self.all.detect {|x| x.name = find_this_song}
-    if did_i_find_it == nil
+    if did_i_find_it == 0
       s = self.new
       s.name = find_this_song
       s.save
